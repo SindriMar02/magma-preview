@@ -170,6 +170,7 @@ body:not(.is-loading) .header__logo{opacity:1}
 .calendar__day{position:absolute;left:0;top:15px;width:8.75%;line-height:1}
 .calendar__day strong{display:block;font-size:60px;line-height:.9;font-weight:700;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
 .calendar__day small{display:block;font-size:13px;line-height:1.23;margin-top:3px;text-transform:capitalize}
+.calendar__day .d-short{display:none}
 .calendar__cell{position:relative;flex:1 1 0;width:0;padding-left:20px;transition:opacity .5s var(--ease),transform .5s var(--ease)}
 @media (hover:hover){
   .calendar__row:hover .calendar__cell{opacity:.1}
@@ -189,6 +190,7 @@ body:not(.is-loading) .header__logo{opacity:1}
 .calendar__event h5 span{display:block;padding-top:4px}
 .calendar__link{position:absolute;inset:0;z-index:3}
 .calendar__cell--booked .calendar__link,.calendar__cell--short .calendar__link{display:none}
+.calendar__booked{display:none}
 .calendar__empty{padding:40px 0 40px 8.75%;font-size:20px;line-height:1.2;color:var(--mute)}
 .more{display:flex;align-items:center;gap:6px;margin-top:20px;font-size:18px;line-height:1.6}
 .more__circle{width:6px;height:6px;border-radius:50%;background:var(--ink);transform:translateY(-1px)}
@@ -363,12 +365,23 @@ body.static .header__logo{opacity:1}
   .calendar__arrow{position:relative;left:auto;right:auto;width:44px;height:44px;transform:none;flex:none}
   .calendar__month{font-size:clamp(40px,12vw,60px)}
   .calendar__filter{position:static;width:100%;justify-content:flex-start;flex-wrap:wrap;gap:6px 16px;font-size:16px;margin-top:18px}
-  .calendar__row{flex-wrap:wrap;padding:14px 0 6px 20%;min-height:0;row-gap:14px}
+  /* one line per free block; the booked spans collapse to a single muted line */
+  .calendar__row{display:block;padding:14px 0 12px 20%;min-height:0}
   .calendar__day{width:20%;top:14px}
   .calendar__day strong{font-size:44px}
-  .calendar__cell{flex:0 0 50%;width:50%;padding-left:0;padding-right:14px;min-height:96px}
-  .calendar__cell:nth-child(odd){padding-left:0}
-  .calendar__event h4{font-size:18px}
+  /* 'Miðvikudagur' does not fit the 20% day column at 390 */
+  .calendar__day .d-full{display:none}.calendar__day .d-short{display:inline;text-transform:none}
+  .calendar__cell{width:100%;padding:0;min-height:0}
+  .calendar__cell--booked{display:none}
+  .calendar__cell + .calendar__cell{margin-top:2px}
+  .calendar__event{display:flex;align-items:center;gap:10px;height:auto;min-height:44px;padding-left:16px}
+  .calendar__event .spacer{width:6px}
+  .calendar__event time{margin:0;font-size:17px;flex:none}
+  .calendar__event h4{font-size:17px;flex:none}
+  .calendar__event h5{margin:0 0 0 auto;text-align:right;color:var(--mute)}
+  .calendar__event h5 span{display:none}
+  .calendar__booked{display:flex;flex-wrap:wrap;gap:0 8px;margin-top:8px;font-size:13px;line-height:1.5;color:var(--mute)}
+  .calendar__booked-lbl{color:var(--ink)}
   .calendar__form{grid-template-columns:20% minmax(0,1fr);padding:18px 0 22px}
   .form__date strong{font-size:44px}
   .form{grid-template-columns:1fr;padding-left:0;padding-right:0;row-gap:18px}
@@ -401,11 +414,9 @@ body.static .header__logo{opacity:1}
   .logo__mark{height:30px}
 }
 @media (max-width:479px){
-  .calendar__cell{min-height:84px}
   .nav__item a,.header__tel{font-size:16px}
   .agenda__day{font-size:18px}
   .agenda__item-title,.agenda__item-info{font-size:18px}
-  .agenda__timetable{width:72%}
   .hero h1{font-size:clamp(28px,9vw,40px)}
   .tile__title,.tile__date{font-size:clamp(18px,5.6vw,24px)}
 

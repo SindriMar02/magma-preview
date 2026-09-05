@@ -279,7 +279,10 @@
       var row = el('div', 'calendar__row'); row.dataset.date = d.toDateString();
       var day = el('div', 'calendar__day');
       day.appendChild(el('strong', null, pad2(d.getDate())));
-      day.appendChild(el('small', null, dayName(d)));
+      var wd = el('small');
+      wd.appendChild(el('span', 'd-full', dayName(d)));
+      wd.appendChild(el('span', 'd-short', t('dshort')[d.getDay()]));
+      day.appendChild(wd);
       row.appendChild(day);
       blocks(d).forEach(function (b) {
         var len = b.end - b.start, fits = b.free && len >= dur;
@@ -304,6 +307,17 @@
         }
         row.appendChild(cell);
       });
+      /* Phones get one line per FREE block and a single muted line for the booked spans.
+         The booked times are still stated, which is the page's whole thesis, but three
+         stacked lines per block turned one month into 5,000px of scroll. Both forms are
+         in the DOM and CSS picks one, so a rotation cannot strand the wrong one. */
+      var bk = blocks(d).filter(function (b) { return !b.free; });
+      if (bk.length) {
+        var sum = el('div', 'calendar__booked');
+        sum.appendChild(el('span', 'calendar__booked-lbl', t('booked')));
+        sum.appendChild(el('span', null, bk.map(function (b) { return fmtTime(b.start) + '\u2013' + fmtTime(b.end); }).join(' \u00b7 ')));
+        row.appendChild(sum);
+      }
       calRows.appendChild(row);
       if (state.sel && state.sel.day.getTime() === d.getTime()) calRows.appendChild(renderForm());
     });
