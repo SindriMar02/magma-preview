@@ -332,7 +332,10 @@ body.static .header__logo{opacity:1}
   body.is-menu-open .hamburger u:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
   .menu{padding-top:90px}
   .content{padding-top:76px}
-  .hero{display:flex;flex-direction:column}
+  /* align-items:start comes from the desktop grid; in a column flex container it makes
+     every child shrink to its content width, which left the agenda panel 249px wide in a
+     388px row. */
+  .hero{display:flex;flex-direction:column;align-items:stretch}
   .hero > *{min-width:0}
   .hero__text{order:-1;margin:0 0 22px}
   .hero__media{margin:0 calc(-1*var(--gutter)) 0;width:auto;height:56vw;min-height:220px}
