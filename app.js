@@ -181,6 +181,11 @@
     if (diff === 1) return t('tomorrow');
     return dayName(d);
   }
+  function tabShort(d) {
+    var diff = Math.round((d.getTime() - TODAY.getTime()) / 86400000);
+    if (diff === 0) return lang === 'is' ? 'Í dag' : 'Today';
+    return t('dshort')[d.getDay()];
+  }
   function fitsList(len) {
     var names = SVC_KEYS.filter(function (k) { return SERVICES[k].dur <= len; }).map(function (k) { return SERVICES[k].short[lang]; });
     return names;
@@ -212,7 +217,9 @@
   function renderAgendaDays() {
     agendaDays.innerHTML = '';
     AGENDA.forEach(function (d, i) {
-      var b = el('button', 'agenda__day' + (i === state.agendaDay ? ' is-active' : ''), tabLabel(d));
+      var b = el('button', 'agenda__day' + (i === state.agendaDay ? ' is-active' : ''));
+      b.appendChild(el('span', 'd-full', tabLabel(d)));
+      b.appendChild(el('span', 'd-short', tabShort(d)));
       b.type = 'button'; b.setAttribute('role', 'tab'); b.setAttribute('aria-selected', i === state.agendaDay ? 'true' : 'false');
       b.addEventListener('click', function () {
         if (state.agendaDay === i) return;
