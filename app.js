@@ -217,9 +217,10 @@
   function renderAgendaDays() {
     agendaDays.innerHTML = '';
     AGENDA.forEach(function (d, i) {
-      var b = el('button', 'agenda__day' + (i === state.agendaDay ? ' is-active' : ''));
-      b.appendChild(el('span', 'd-full', tabLabel(d)));
-      b.appendChild(el('span', 'd-short', tabShort(d)));
+      /* short day forms at every width: three Icelandic weekday names cannot share the
+         panel's tab row until 1440, and the row values already read "MÁN 13:45". */
+      var b = el('button', 'agenda__day' + (i === state.agendaDay ? ' is-active' : ''), tabShort(d));
+      b.title = tabLabel(d);
       b.type = 'button'; b.setAttribute('role', 'tab'); b.setAttribute('aria-selected', i === state.agendaDay ? 'true' : 'false');
       b.addEventListener('click', function () {
         if (state.agendaDay === i) return;
