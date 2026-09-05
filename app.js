@@ -9,7 +9,7 @@
     is: {
       skip: 'Fara beint í tímana', menu: 'Valmynd',
       nav_times: 'Tímar', nav_prices: 'Verð', nav_shop: 'Verkstæðið', nav_way: 'Leiðin',
-      agenda_all: 'Sjá alla dagana', hero_days: 'Mán–fim',
+      agenda_all: 'Sjá alla dagana', hero_days: 'Mán–fös',
       h1: 'Bifreiðaverkstæðið á gulu götunni.', hero_cat: 'Dekk, smur, greining, ástandsskoðun',
       cta: 'Bóka tíma', call: 'Hringja', directions: 'Leiðarlýsing',
       cal_note: 'Bókaðir tímar sjást líka. Þú sérð daginn eins og hann liggur hjá okkur.',
@@ -33,15 +33,15 @@
       a3_cat: 'Rafmagn', a3_title: 'Rafmagnsgreining', a3_sub: 'Bilanaleit, startarar, alternatorar, rafgeymar',
       a4_cat: 'Bremsur', a4_title: 'Bremsur, olíur og kúplingar', a4_sub: 'Skoðun, mæling, skipti',
       h_shop: 'Verkstæðið',
-      shop_lede: 'Opið mánudaga til fimmtudaga, átta til sex. Fjórir langir dagar í stað fimm stuttra þýða að bíllinn þinn fær samfelldan tíma hjá sama manninum í stað þess að bíða af sér vaktaskipti. Á föstudögum svörum við ekki í símann, og dagatalið hér að ofan sýnir það strax.',
+      shop_lede: 'Verkstæðið er opið mánudaga til föstudaga, frá átta til fimm. Dagatalið hér að ofan sýnir daginn eins og hann liggur, með bókuðu tímunum líka, svo þú sérð strax hvort það er pláss fyrir bílinn þinn í vikunni eða hvort það borgar sig að hringja.',
       rig_cap: 'Hjólastillingartækið mælir hverja hjólastöðu og prentar niðurstöðuna út. Beint stýri, og dekkin endast lengur af því að þau slitna jafnt.',
       h_people: 'Fólkið', h_way: 'Leiðin',
       w1_title: 'Gula húsið með rauða skiltinu', w1_sub: 'Innkeyrslan er beint af Smiðjuvegi',
       w2_title: 'Innkeyrslan', w2_sub: 'Beint af Smiðjuvegi', w3_title: 'Bílastæðin', w3_sub: 'Fyrir framan hurðina',
       w4_title: 'Taktu skráningarskírteinið með',
-      hours: 'Mán–fim 08:00–18:00', proto: 'Frumgerð. Myndir merktar „vantar“ koma frá viðskiptavini.', credit: 'Hönnun og smíði',
+      hours: 'Mán–fös 08:00–17:00', proto: 'Frumgerð. Myndir merktar „vantar“ koma frá viðskiptavini.', credit: 'Hönnun og smíði',
       free: 'Laust', booked: 'Bókað', until: 'til', room: 'Rúm fyrir', tooShort: 'Of stutt fyrir', min: 'mín', from: 'frá',
-      today: 'Í dag', tomorrow: 'Á morgun', closed: 'Lokað fös–sun',
+      today: 'Í dag', tomorrow: 'Á morgun', closed: 'Lokað lau–sun',
       f_start: 'Byrjun', f_service: 'Þjónusta', f_name: 'Nafn', f_phone: 'Símanúmer', f_plate: 'Bílnúmer', f_email: 'Netfang',
       f_submit: 'Staðfesta tíma', done: 'Móttekið', done_p: 'Smiðjuvegi 30, 200 Kópavogur. Taktu skráningarskírteinið með.',
       prev: 'Fyrri mánuður', next: 'Næsti mánuður',
@@ -51,7 +51,7 @@
     en: {
       skip: 'Skip to the diary', menu: 'Menu',
       nav_times: 'Diary', nav_prices: 'Prices', nav_shop: 'The shop', nav_way: 'Getting here',
-      agenda_all: 'See every day', hero_days: 'Mon–Thu',
+      agenda_all: 'See every day', hero_days: 'Mon–Fri',
       h1: 'The workshop on the yellow street.', hero_cat: 'Tyres, oil, diagnostics, condition check',
       cta: 'Book a slot', call: 'Call', directions: 'Directions',
       cal_note: 'Booked slots are shown too. You see the day as it stands with us.',
@@ -75,15 +75,15 @@
       a3_cat: 'Electrical', a3_title: 'Electrical diagnostics', a3_sub: 'Fault finding, starters, alternators, batteries',
       a4_cat: 'Brakes', a4_title: 'Brakes, oils and clutches', a4_sub: 'Inspection, measurement, replacement',
       h_shop: 'The shop',
-      shop_lede: 'Open Monday to Thursday, eight to six. Four long days instead of five short ones mean your car gets uninterrupted time with the same person instead of waiting out a shift change. We do not answer the phone on Fridays, and the diary above shows that straight away.',
+      shop_lede: 'The workshop is open Monday to Friday, eight to five. The diary above shows the day as it lies, booked slots included, so you can see straight away whether there is room for your car this week or whether it is worth ringing.',
       rig_cap: 'The alignment rig measures every wheel angle and prints the result. A straight wheel, and tyres that last longer because they wear evenly.',
       h_people: 'The people', h_way: 'Getting here',
       w1_title: 'The yellow building with the red sign', w1_sub: 'The drive is straight off Smiðjuvegur',
       w2_title: 'The entrance', w2_sub: 'Straight off Smiðjuvegur', w3_title: 'Parking', w3_sub: 'In front of the door',
       w4_title: 'Bring the registration certificate',
-      hours: 'Mon–Thu 08:00–18:00', proto: 'Prototype. Images marked “needed” come from the client.', credit: 'Design and build',
+      hours: 'Mon–Fri 08:00–17:00', proto: 'Prototype. Images marked “needed” come from the client.', credit: 'Design and build',
       free: 'Open', booked: 'Booked', until: 'until', room: 'Room for', tooShort: 'Too short for', min: 'min', from: 'from',
-      today: 'Today', tomorrow: 'Tomorrow', closed: 'Closed Fri–Sun',
+      today: 'Today', tomorrow: 'Tomorrow', closed: 'Closed Sat–Sun',
       f_start: 'Start', f_service: 'Service', f_name: 'Name', f_phone: 'Phone', f_plate: 'Plate', f_email: 'Email',
       f_submit: 'Confirm slot', done: 'Received', done_p: 'Smiðjuvegur 30, 200 Kópavogur. Bring the registration certificate.',
       prev: 'Previous month', next: 'Next month',
@@ -106,7 +106,7 @@
     skodun:   { is: 'Ástandsskoðun', en: 'Condition check', cat: { is: 'Ástandsskoðun', en: 'Condition check' }, sub: { is: 'Gjaldið fellur niður ef við gerum við', en: 'Fee waived if we do the repair' }, dur: 45, from: true, price: '10.000', img: 'assets/img/check.jpg', short: { is: 'skoðun', en: 'a check' } }
   };
   var SVC_KEYS = Object.keys(SERVICES);
-  var OPEN_M = 8 * 60, CLOSE_M = 18 * 60;
+  var OPEN_M = 8 * 60, CLOSE_M = 17 * 60;
 
   /* ---------------- demo diary: deterministic, tuned as content ---------------- */
   function prng(seed) {
@@ -130,7 +130,7 @@
     }
     return (CACHE[key] = { full: full, slots: slots });
   }
-  function isOpenDay(d) { var wd = d.getDay(); return wd >= 1 && wd <= 4; }
+  function isOpenDay(d) { var wd = d.getDay(); return wd >= 1 && wd <= 5; }
   /* the day's blocks: consecutive same-state slots merged, the shape the calendar shows */
   function blocks(d) {
     var rec = dayRec(d), out = [], cur = null;
