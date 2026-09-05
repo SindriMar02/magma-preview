@@ -393,10 +393,14 @@ body.static .header__logo{opacity:1}
   /* Icelandic weekday names are long: three of them cannot share a narrow row, and a
      nowrap tab row is what pushed the whole panel past the viewport at 320. */
   .d-full{display:none}.d-short{display:inline}
-  .logo__word{display:none}
-  .logo__mark{height:30px}
   .header__tel{font-size:15px}
   .header__tel .gl-circle{width:15px;height:15px}
+}
+/* Only where the name genuinely cannot fit beside the number does the wordmark yield to
+   the mark. On every real phone the company NAME stays on the first screen. */
+@media (max-width:359px){
+  .logo__word{display:none}
+  .logo__mark{height:30px}
 }
 @media (max-width:479px){
   .calendar__cell{min-height:84px}
